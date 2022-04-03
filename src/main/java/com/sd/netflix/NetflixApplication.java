@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 
-@PropertySource("file:C:\\Code\\netflix-${env}.properties")
+@PropertySource("file:/home/ec2-user/props/netflix-${env}.properties")
 @SpringBootApplication
 @Slf4j
 public class NetflixApplication {
