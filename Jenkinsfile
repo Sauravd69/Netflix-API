@@ -3,7 +3,7 @@ node{
    def tomcatWeb = 'C:\\My App\\apache-tomcat-9.0.63\\webapps'
 
    stage('Git Checkout'){
-     git url: 'https://github.com/Sauravd69/Netflix-API'
+     git branch: 'war', url: 'https://github.com/Sauravd69/Netflix-API'
    }
 
    stage('MVN Package'){
