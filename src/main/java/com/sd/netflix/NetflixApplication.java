@@ -20,6 +20,9 @@ public class NetflixApplication extends SpringBootServletInitializer {
     @Value("${env}")
     private String env;
 
+    @Value("${server.port}")
+    private String port;
+
     public static void main(String[] args) {
         SpringApplication.run(NetflixApplication.class, args);
     }
@@ -27,10 +30,14 @@ public class NetflixApplication extends SpringBootServletInitializer {
     @Bean
     CommandLineRunner run(MovieRepository movieRepository) {
         return args -> {
-            log.info("env is: {}", env);
+            log.info("env is: {} & port is: {}", env, port);
             if (env.equals("dev")) {
                 log.info("inserting data into dev DB");
                 movieRepository.save(new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50));
+            } else if (env.equals("qa")) {
+                log.info("inserting data into qa DB");
+                movieRepository.save(new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50));
+                movieRepository.save(new MovieEntity(null, "RRR", "Movie", "Action", 2022, 4.30));
             }
         };
     }
