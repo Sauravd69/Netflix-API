@@ -34,10 +34,12 @@ public class NetflixApplication extends SpringBootServletInitializer {
             if (env.equals("dev")) {
                 log.info("inserting data into dev DB");
                 movieRepository.save(new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50));
+                movieRepository.save(new MovieEntity(null, "RRR", "Movie", "Action", 2022, 4.30));
             } else if (env.equals("qa")) {
                 log.info("inserting data into qa DB");
                 movieRepository.save(new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50));
                 movieRepository.save(new MovieEntity(null, "RRR", "Movie", "Action", 2022, 4.30));
+                movieRepository.save(new MovieEntity(null, "Red Notice", "Movie", "Action", 2021, 4.30));
             }
         };
     }
