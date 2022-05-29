@@ -63,4 +63,13 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>qa</id>
+			<properties>
+				<active.profile>qa</active.profile>
+			</properties>
+		</profile>
+	</profiles>
+
 </project>

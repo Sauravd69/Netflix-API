@@ -9,7 +9,7 @@ node{
    stage('MVN Package'){
       // Get maven home path
       def mvnHome =  tool name: 'maven-3', type: 'maven'
-      bat "${mvnHome}/bin/mvn clean package -Dactive.profile=qa"
+      bat "${mvnHome}/bin/mvn clean install -Pqa"
    }
 
    stage('Deploy to Tomcat'){
