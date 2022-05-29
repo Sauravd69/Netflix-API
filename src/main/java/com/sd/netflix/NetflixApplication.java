@@ -12,16 +12,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 
-@PropertySource("file:C:\\\\Code\\\\netflix-${env}.properties")
+//@PropertySource("file:C:\\\\Code\\\\netflix-${env}.properties")
 @SpringBootApplication
 @Slf4j
 public class NetflixApplication extends SpringBootServletInitializer {
 
     @Value("${env}")
     private String env;
-
-    @Value("${server.port}")
-    private String port;
 
     public static void main(String[] args) {
         SpringApplication.run(NetflixApplication.class, args);
@@ -30,7 +27,7 @@ public class NetflixApplication extends SpringBootServletInitializer {
     @Bean
     CommandLineRunner run(MovieRepository movieRepository) {
         return args -> {
-            log.info("env is: {} & port is: {}", env, port);
+            log.info("env is: {}", env);
             if (env.equals("dev")) {
                 log.info("inserting data into dev DB");
                 movieRepository.save(new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50));
