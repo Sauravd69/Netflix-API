@@ -13,7 +13,7 @@ node{
    stage('MVN Package'){
       // Get maven home path
       def mvnHome =  tool name: 'maven-3', type: 'maven'
-      bat "${mvnHome}/bin/mvn -Denv=env.environment package"
+      bat "${mvnHome}/bin/mvn -Denv=qa clean package"
    }
 
    stage('Deploy to Tomcat'){
