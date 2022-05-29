@@ -67,7 +67,8 @@
 		<profile>
 			<id>qa</id>
 			<properties>
-				<active.profile>qa</active.profile>
+				<build.profile.id>qa</build.profile.id>
+				<profileActive>qa</profileActive>
 			</properties>
 		</profile>
 	</profiles>
