@@ -19,3 +19,5 @@
 5. Webhook didn't work because it's not possible to trigger jenkins jobs from GitHub webhook locally.
    No need to install any plugin. Refer trigger-pipeline-on-each-commit-poc
 6. To integrate Tomcat credential with Jenkins, use credential of manager-script roles from tomcat-users.xml
+7. For integrating SonarQube with Jenkins follow below except generating token
+   https://www.youtube.com/watch?v=wn9wWYAShag&t=542s
