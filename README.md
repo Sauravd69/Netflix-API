@@ -16,3 +16,6 @@
 3. There is no use and need of server.servlet.context-path in property file
 4. For setting up profile:
    https://riptutorial.com/spring-boot/example/31100/set-the-right-spring-profile-by-building-the-application-automatically--maven-
+5. Webhook didn't work because it's not possible to trigger jenkins jobs from GitHub webhook locally.
+   No need to install any plugin. Refer trigger-pipeline-on-each-commit-poc
+6. To integrate Tomcat credential with Jenkins, use credential of manager-script roles from tomcat-users.xml
