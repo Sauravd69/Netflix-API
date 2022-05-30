@@ -21,3 +21,15 @@
 6. To integrate Tomcat credential with Jenkins, use credential of manager-script roles from tomcat-users.xml
 7. For integrating SonarQube with Jenkins follow below except generating token
    https://www.youtube.com/watch?v=wn9wWYAShag&t=542s
+
+### Tomcat
+1. To start server double-click on Windows batch file bin\startup
+2. To start server double-click on Windows batch file bin\shutdown
+3. To change port conf\server.xml & update connector port
+
+### Jenkins
+1. Run java -jar jenkins.war in command. By default for Jenkins port will be 8080
+
+### SonarQube
+1. To start server double-click on Windows batch file bin\windows-x86-64\StartSonar
+2. By default for SonarQube port will be 9000
