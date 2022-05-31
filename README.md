@@ -7,6 +7,11 @@
 4. POC to deploy war file to tomcat through Jenkins pipeline
 5. Refer pipeline-script-from-scm.png and pipeline called netflix-pipeline-poc, netflix-freestyle-poc
 
+### JACOCO
+1. This branch is a POC to implement Jacoco for code coverage
+2. Add Jacoco plugin in pom.xml and Jenkins from Manage Plugin option
+3. Had to create new Quality Gate in SonarQube to get rid of failure from Code Coverage on New Code
+
 ### DEV
 1. This branch is a POC to create jar file & deploy to EC2
 
@@ -21,7 +26,9 @@
 6. To integrate Tomcat credential with Jenkins, use credential of manager-script roles from tomcat-users.xml
 7. For integrating SonarQube with Jenkins follow below except generating token
    https://www.youtube.com/watch?v=wn9wWYAShag&t=542s
-8. Refer below for Unit testing https://stackabuse.com/guide-to-unit-testing-spring-boot-rest-apis/
+8. Refer below for Unit testing except not adding any dependency in pom.xml
+   https://stackabuse.com/guide-to-unit-testing-spring-boot-rest-apis/
+9. Final branch: main, Final pipeline: netflix-jacoco-poc
 
 ### Tomcat
 1. To start server double-click on Windows batch file bin\startup
@@ -33,4 +40,4 @@
 
 ### SonarQube
 1. To start server double-click on Windows batch file bin\windows-x86-64\StartSonar
-2. By default for SonarQube port will be 9000
+2. By default, for SonarQube port will be 9000
