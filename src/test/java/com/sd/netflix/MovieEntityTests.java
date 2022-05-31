@@ -11,10 +11,10 @@ public class MovieEntityTests {
 
     @Test
     void testMovieEntity() {
-        MovieEntity record1 = new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50);
+        MovieEntity record1 = new MovieEntity(1L, "Dont look up", "Movie", "Sci-fi", 2021, 4.50);
 
         MovieEntity movieEntity = MovieEntity.builder()
-                .id(null)
+                .id(1L)
                 .name("Dont look up")
                 .type("Movie")
                 .genre("Sci-fi")
@@ -26,15 +26,15 @@ public class MovieEntityTests {
 
     @Test
     void testMovieEntity2() {
-        MovieEntity record1 = new MovieEntity(null, "Dont look up", "Movie", "Sci-fi", 2021, 4.50);
+        MovieEntity record1 = new MovieEntity();
 
         MovieEntity movieEntity = MovieEntity.builder()
                 .id(null)
-                .name("Dont look up")
-                .type("Movie")
-                .genre("Sci-fi")
-                .publish_year(2021)
-                .rating(4.50)
+                .name(null)
+                .type(null)
+                .genre(null)
+                .publish_year(0)
+                .rating(0.0)
                 .build();
         assertEquals(record1, movieEntity);
     }
