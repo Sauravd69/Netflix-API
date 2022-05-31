@@ -21,6 +21,7 @@
 6. To integrate Tomcat credential with Jenkins, use credential of manager-script roles from tomcat-users.xml
 7. For integrating SonarQube with Jenkins follow below except generating token
    https://www.youtube.com/watch?v=wn9wWYAShag&t=542s
+8. Refer below for Unit testing https://stackabuse.com/guide-to-unit-testing-spring-boot-rest-apis/
 
 ### Tomcat
 1. To start server double-click on Windows batch file bin\startup
